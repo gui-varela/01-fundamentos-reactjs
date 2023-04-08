@@ -1,11 +1,22 @@
-import { useState } from 'react'
+import { Header } from './components/Header'
+import { Sidebar } from './components/Sidebar'
+import { Post } from './components/Post'
 
-function App() {
-  const [count, setCount] = useState(0)
+import './global.css'
 
+import styles from './App.module.css'
+
+export function App() {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <Header></Header>
+      <div className={styles.wrapper}>
+        <Sidebar></Sidebar>
+        <main>
+          <Post />
+          <Post />
+        </main>
+      </div>
+    </div>
   )
 }
-
-export default App
